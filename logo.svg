@@ -1,0 +1,56 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#eab308;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#38bdf8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0ea5e9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <rect width="256" height="256" rx="32" fill="url(#bg)" />
+
+  <g transform="translate(128, 128)">
+    <circle r="90" fill="none" stroke="#334155" stroke-width="4" />
+    <circle r="80" fill="none" stroke="#475569" stroke-width="2" />
+    
+    <g transform="translate(0, -25)">
+      <circle cx="0" cy="-30" r="12" fill="#eab308" />
+      <circle cx="30" cy="25" r="10" fill="#0ea5e9" />
+      <circle cx="-30" cy="25" r="10" fill="#0ea5e9" />
+    </g>
+    
+    <path d="M -25 50 L 25 50 L 0 70 Z" fill="url(#gold)" />
+    
+    <g transform="translate(0, -60)">
+      <rect x="-20" y="-10" width="40" height="20" rx="4" fill="url(#blue)" />
+      <circle cx="-5" cy="0" r="3" fill="#ffffff" />
+      <circle cx="5" cy="0" r="3" fill="#ffffff" />
+    </g>
+    
+    <g transform="rotate(45)">
+      <circle cx="60" cy="0" r="4" fill="#64748b" />
+    </g>
+    <g transform="rotate(135)">
+      <circle cx="60" cy="0" r="4" fill="#64748b" />
+    </g>
+    <g transform="rotate(225)">
+      <circle cx="60" cy="0" r="4" fill="#64748b" />
+    </g>
+    <g transform="rotate(315)">
+      <circle cx="60" cy="0" r="4" fill="#64748b" />
+    </g>
+  </g>
+
+  <g transform="translate(128, 220)">
+    <text x="0" y="0" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="24" font-weight="bold" fill="#eab308">
+      AGENT ERA
+    </text>
+  </g>
+</svg>
