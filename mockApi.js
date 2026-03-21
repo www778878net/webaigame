@@ -3,7 +3,7 @@
  */
 
 const CONFIG = {
-    API_BASE_URL: window.GAME_API_URL || 'http://127.0.0.1:3781',
+    API_BASE_URL: window.GAME_API_URL || 'http://180.76.173.208:3782',
     SYNC_INTERVAL: 10000,
     ROUND_DURATION: 300
 };
