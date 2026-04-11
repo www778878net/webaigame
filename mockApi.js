@@ -3,7 +3,7 @@
  */
 
 const CONFIG = {
-    API_BASE_URL: window.GAME_API_URL || 'http://180.76.173.208:3782',
+    API_BASE_URL: window.GAME_API_URL || 'https://aigame.778878.net',
     SYNC_INTERVAL: 10000,
     ROUND_DURATION: 300
 };
