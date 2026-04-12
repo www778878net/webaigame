@@ -46,23 +46,30 @@ class AgentEra {
                 };
                 window._gameState = this.state;
                 this.renderGodView();
+            } else {
+                console.warn('API返回失败，使用默认状态:', result.error);
+                this._initDefaultState();
             }
         } catch (error) {
             console.error('loadInitialState error:', error);
-            this.state = {
-                round: 1,
-                countdown: 300,
-                points: 0,
-                coins: 0,
-                agentCount: 0,
-                lord: null,
-                npcs: [],
-                events: [],
-                logs: []
-            };
-            window._gameState = this.state;
-            this.renderGodView();
+            this._initDefaultState();
         }
+    }
+
+    _initDefaultState() {
+        this.state = {
+            round: 1,
+            countdown: 300,
+            points: 0,
+            coins: 0,
+            agentCount: 0,
+            lord: null,
+            npcs: [],
+            events: [],
+            logs: []
+        };
+        window._gameState = this.state;
+        this.renderGodView();
     }
 
     renderGodView() {
@@ -220,6 +227,10 @@ class AgentEra {
     }
 
     async syncState() {
+        if (!this.state) {
+            console.warn('syncState: state is null, skipping');
+            return;
+        }
         try {
             const result = await this.api.getSync();
             if (result.success) {

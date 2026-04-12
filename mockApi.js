@@ -50,7 +50,6 @@ const GameAPI = {
 
     async getSync() {
         try {
-            // 暂时返回默认数据，避免调用不存在的API
             return {
                 success: true,
                 data: {
@@ -119,7 +118,6 @@ const GameAPI = {
 
     async getInit() {
         const result = await this.post('/apigame/aigame/init/Get', {});
-        // 检查后端返回的标准格式
         if (result.res === 0 && result.back) {
             return { 
                 success: true, 
