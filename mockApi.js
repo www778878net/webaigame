@@ -5,7 +5,7 @@
 const CONFIG = {
     API_BASE_URL: window.GAME_API_URL || 'https://aigame.778878.net',
     SYNC_INTERVAL: 10000,
-    ROUND_DURATION: 300
+    ROUND_DURATION: 600
 };
 
 const GameAPI = {
@@ -117,7 +117,7 @@ const GameAPI = {
     },
 
     async getInit() {
-        const result = await this.post('/apigame/aigame/init/Get', {});
+        const result = await this.post('/apigame/aigame/lord/Get', {});
         if (result.res === 0 && result.back) {
             return { 
                 success: true, 
